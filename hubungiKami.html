@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rancho&display=swap"
+      rel="stylesheet" />
+    <title>SAS Audio</title>
+  </head>
+  <body class="overflow-x-hidden font-[Nunito]">
+    <header
+      class="relative flex justify-between items-center px-8 py-4 shadow bg-[#2C2C2C] z-50">
+      <div>
+        <img src="./assets/logo.png" alt="logo sas" class="h-16" />
+      </div>
+
+      <button
+        id="btn-humberger"
+        class="md:hidden text-3xl cursor-pointer text-white hover:text-[#F7DD7D]">
+        &#9776;
+      </button>
+
+      <nav class="hidden md:flex gap-5 font-semibold text-xl text-[#F7DD7D]">
+        <a href="/index.html" class="hover:text-yellow-300 transition-all"
+          >Home</a
+        >
+        <a href="#" class="hover:text-yellow-300 transition-all">Layanan</a>
+        <a href="#" class="hover:text-yellow-300 transition-all">Portofolio</a>
+        <a href="/hubungiKami.html" class="hover:text-yellow-300 transition-all"
+          >Hubungi Kami</a
+        >
+      </nav>
+
+      <nav
+        id="menu-mobile"
+        class="absolute top-full left-0 w-full bg-[#2C2C2C] flex flex-col items-center p-5 gap-4 font-semibold shadow-md text-[#F7DD7D] transition-all duration-300 opacity-0 invisible md:hidden">
+        <a href="/index.html" class="hover:text-yellow-300">Home</a>
+        <a href="" class="hover:text-yellow-300">Layanan</a>
+        <a href="#" class="hover:text-yellow-300">Portofolio</a>
+        <a href="/hubungiKami.html" class="hover:text-yellow-300"
+          >Hubungi Kami</a
+        >
+      </nav>
+    </header>
+    <section
+      class="bg-cover bg-center min-h-screen relative"
+      style="background-image: url(&quot;./assets/backgroundMixer.jpg&quot;)">
+      <div
+        class="relative bg-black/70 min-h-screen py-10 flex items-center justify-center">
+        <div class="text-white w-full px-3 pt-24">
+          <div class="flex flex-col items-center justify-center px-4">
+            <img src="./assets/logo.png" alt="logo sas audio" class="w-40" />
+            <h1 class="text-3xl md:text-5xl text-center font-bold md:px-0 py-2">
+              GARANSI 100% KUALITAS SUARA TERBAIK!
+            </h1>
+            <h2 class="font-medium text-base md:text-3xl">
+              Konsultasi dengan Kami Spesialis Sound.
+            </h2>
+          </div>
+          <div>
+            <form action="" class="max-w-2xl mx-auto">
+              <div class="py-5 md:py-10 m-2 px-2">
+                <div class="flex flex-col gap-2 md:w-full">
+                  <label for="name" class="font-semibold"
+                    >Nama <span class="text-red-500">*</span></label
+                  >
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="border border-white rounded-md bg-white text-black px-2 py-2 outline-none"
+                    placeholder="Masukan nama anda" />
+                  <p id="error-name" class="text-red-500 invisible text-sm">
+                    Nama harus diisi!
+                  </p>
+                </div>
+                <div class="flex flex-col gap-2 w-full py-3">
+                  <label for="name" class="font-semibold"
+                    >Keperluan <span class="text-red-500">*</span></label
+                  >
+                  <textarea
+                    name="name"
+                    id="whatsapp"
+                    pattern="[0-9]*"
+                    class="border border-white rounded-md bg-white text-black px-2 outline-none resize-none h-34"
+                    placeholder="Contoh: Saya butuh instalasi sound system untuk cafe.."></textarea>
+                  <p id="error-wa" class="text-red-500 invisible text-sm">
+                    Pesan tidak boleh kosong!
+                  </p>
+                  <p
+                    id="error-wa-invalid"
+                    class="text-red-500 invisible absolute text-sm py-15">
+                    Nomor WhatsApp tidak valid!
+                  </p>
+                </div>
+                <div class="py-5">
+                  <button
+                    type="button"
+                    class="flex items-center justify-center gap-2 border border-yellow-400 rounded-md bg-[#fcd546] text-black py-2 w-full cursor-pointer"
+                    onclick="sendWA()">
+                    <img
+                      src="./assets/whatsapp.png"
+                      alt="gambar whatsapp"
+                      class="w-4" />Chat di whatsapp
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-[#2C2C2C] text-[#F7DD7D] pt-2 pb-2">
+      <div class="container mx-auto px-3 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-5 items-start">
+          <div>
+            <div class="flex items-center gap-3">
+              <img src="./assets/logo.png" alt="Gambar logo SAS" class="w-14" />
+              <h3 class="font-semibold">Sas Audio System</h3>
+            </div>
+            <p class="border-b py-2"></p>
+
+            <p class="py-4">
+              Spesialis instalasi dan tuning sound system terpercaya di
+              Tangerang - Jakarta. Suara merata, vokal jernih, dan bebas dengung
+              untuk segala kebutuhan acara Anda.
+            </p>
+          </div>
+          <div class="">
+            <h3 class="text-2xl h-14 font-semibold">About Us</h3>
+            <p class="border-b py-2"></p>
+
+            <div class="flex flex-col py-3 gap-2 text-base">
+              <span><a href="#" class="hover:text-yellow-300">Layanan</a></span>
+              <span
+                ><a href="#" class="hover:text-yellow-300">Portofolio</a></span
+              >
+              <span
+                ><a href="#" class="hover:text-yellow-300"
+                  >Tentang Kami</a
+                ></span
+              >
+            </div>
+          </div>
+          <div class="">
+            <h3 class="font-semibold h-14 text-2xl">Hubungi Kami</h3>
+            <p class="border-b py-2"></p>
+            <div class="flex flex-col gap-2 py-3">
+              <div class="flex items-center gap-2">
+                <img
+                  src="./assets/whatsapp.png"
+                  alt="gambar whatsapp"
+                  class="w-5" />
+                <p>
+                  <a
+                    href="https://wa.me/+6285695658453"
+                    target="_blank"
+                    class="hover:text-yellow-300"
+                    >085695658453</a
+                  >
+                </p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img src="./assets/gmail.png" alt="gambar gmail" class="w-4" />
+                <p>
+                  <a
+                    href="mailto:sasaudio@gmail.com?subject=Halo&body=Isi pesan"
+                    target="_blank"
+                    class="hover:text-yellow-300"
+                    >sasaudio@gmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+      <div
+        class="border-t border-gray-600 pt-4 text-center text-sm text-gray-400">
+        <p>© <span id="year"></span> SAS Audio System. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+  <script>
+    const tombolMenu = document.getElementById("btn-humberger");
+    const kotakMenu = document.getElementById("menu-mobile");
+    const errorName = document.getElementById("error-name");
+    const errorWA = document.getElementById("error-wa");
+
+    tombolMenu.addEventListener("click", function () {
+      kotakMenu.classList.toggle("opacity-100");
+      kotakMenu.classList.toggle("visible");
+      kotakMenu.classList.toggle("invisible");
+    });
+
+    function sendWA() {
+      const inputName = document.getElementById("name");
+      const inputWA = document.getElementById("whatsapp");
+      const name = inputName.value;
+      const whatsapp = inputWA.value;
+
+      if (name === "") {
+        errorName.classList.remove("invisible");
+        inputName.classList.add("!border-red-500");
+      }
+
+      inputName.addEventListener("input", () => {
+        errorName.classList.add("invisible");
+        inputName.classList.remove("!border-red-500");
+      });
+
+      if (whatsapp === "") {
+        errorWA.classList.remove("invisible");
+        inputWA.classList.add("!border-red-500");
+      }
+      inputWA.addEventListener("input", () => {
+        errorWA.classList.add("invisible");
+        inputWA.classList.remove("!border-red-500");
+      });
+      if (name !== "" && whatsapp !== "") {
+        const url = `https://wa.me/6285695658453?text=Halo, nama saya ${name}. Keperluan : ${whatsapp} `;
+        window.open(url, "_blank");
+      }
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        sendWA();
+      }
+    });
+  </script>
+</html>
