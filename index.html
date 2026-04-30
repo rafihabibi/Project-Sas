@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/favicon.ico">
     <link rel="stylesheet" href="./output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -157,26 +158,97 @@
       <div class="container mx-auto py-6 max-w-6xl">
         <h2 class="text-3xl md:text-4xl text-center font-semibold">Galeri Proyek Kami</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-        <div class="rounded-xl overflow-hidden cursor-pointer group px-2">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-2 px-2">
+        <div class=" relative rounded-xl overflow-hidden cursor-pointer group px-2">
           <img src="./assets/instalasiSpeaker1.jpeg" alt="Speaker" class="rounded-xl w-full h-70 object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 inset-0 bg-black/40">
+            <p class="font-semibold text-2xl">GPDI Kramat Jati, Jakarta Timur</p>
+          </div>
         </div>
-        <div class="rounded-xl overflow-hidden cursor-pointer group px-2">
+        <div class="relative rounded-xl overflow-hidden cursor-pointer group px-2">
         <div>
           <img src="assets/instalasiSpeaker2.jpeg" alt="instalasi 2" class="rounded-xl w-full h-70 object-cover object-[60%_30%] group-hover:scale-110 transition-transform duration-500">
+        </div>
+        <div class="absolute flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 inset-0 bg-black/40 ">
+            <p class="font-semibold text-2xl">Coffe Ground, Sunter Agung</p>
+          </div>
+      </div>
+      <div class=" relative rounded-xl overflow-hidden cursor-pointer group px-2">
+        <div>
+          <img src="assets/setMixer.jpeg" alt="mixer set" class="rounded-xl w-full h-70 object-cover group-hover:scale-110 transition-transform duration-500">
+        </div>
+        <div class="absolute flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 inset-0 bg-black/40">
+          <p class="font-semibold text-2xl">GPDI Kedoya, Jakarta Barat</p>
         </div>
       </div>
       <div class="rounded-xl overflow-hidden cursor-pointer group px-2">
         <div>
-          <img src="assets/setMixer.jpeg" alt="mixer set" class="rounded-xl w-full h-70 object-cover group-hover:scale-110 transition-transform duration-500">
+          <img src="assets/KalibrasiGereja.jpeg" alt="mixer set" class="rounded-xl w-full h-70 object-cover group-hover:scale-110 transition-transform duration-500">
+        </div>
+      </div>
+      <div class="rounded-xl overflow-hidden cursor-pointer group px-2">
+        <div>
+          <img src="assets/instalasiSpeaker3.jpeg" alt="mixer set" class="rounded-xl w-full h-70 object-cover group-hover:scale-110 transition-transform duration-500">
+        </div>
+      </div>
+      <div class="rounded-xl overflow-hidden cursor-pointer group px-2">
+        <div>
+          <img src="assets/instalasiSpeaker4.jpeg" alt="instalasi" class="rounded-xl w-full h-70 object-cover group-hover:scale-110 object-[30%_30%] transition-transform duration-500">
         </div>
       </div>
       </div>
-
-      
     </section>
+    <footer class="bg-[#2C2C2C] text-[#F7DD7D] pt-2 pb-2">
+        <div class="container mx-auto px-3 py-10">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-5 items-start">
+            <div>
+              <div class="flex items-center gap-3"> 
+                <img src="./assets/logo.png" alt="Gambar logo SAS" class="w-14">
+                <h3 class="font-semibold">Sas Audio System</h3>
+              </div>
+              <p class="border-b py-2"></p>
+
+              <p class="py-4">Spesialis instalasi dan tuning sound system terpercaya di Tangerang
+            - Jakarta. Suara merata, vokal jernih, dan bebas dengung untuk
+            segala kebutuhan acara Anda.</p>
+            </div>
+            <div class="">
+              <h3 class="text-2xl h-14 font-semibold">About Us</h3>
+              <p class="border-b py-2"></p>
+
+              <div class="flex flex-col py-3 gap-2 text-base">
+                <span><a href="#" class="hover:text-yellow-300">Layanan</a></span>
+                <span><a href="#" class="hover:text-yellow-300">Portofolio</a></span>
+                <span><a href="#" class="hover:text-yellow-300">Tentang Kami</a></span>
+              </div>
+            </div>
+            <div class="">
+              <h3 class="font-semibold  h-14 text-2xl">Hubungi Kami</h3>
+              <p class="border-b py-2"></p>
+              <div class="flex flex-col gap-2 py-3">
+                <div class="flex items-center gap-2">
+                  <img src="./assets/whatsapp.png" alt="gambar whatsapp" class="w-5">
+                 <p><a href="https://wa.me/+6285695658453" target="_blank"  class="hover:text-yellow-300">085695658453</a></p>
+                </div>
+                <div class="flex items-center gap-2">
+                 <img src="./assets/gmail.png" alt="gambar gmail" class="w-4">
+                 <p><a href="mailto:sasaudio@gmail.com?subject=Halo&body=Isi pesan" target="_blank"  class="hover:text-yellow-300">sasaudio@gmail.com</a></p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        <div>
+      </div>
+    </div>
+     <div class="border-t border-gray-600 pt-4 text-center text-sm text-gray-400">
+      <p> © <span id="year"></span> SAS Audio System. All rights reserved.
+</p>
+    </div>
+   </footer>
   </body>
   <script>
+    const year = document.getElementById("year").textContent = new Date().getFullYear();
     const tombolMenu = document.getElementById("btn-humberger");
     const kotakMenu = document.getElementById("menu-mobile");
 
